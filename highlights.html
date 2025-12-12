@@ -11,48 +11,50 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
-  <main>
-    <nav class="top-nav">
-      <p class="logo-text">49ers JP</p>
-      <ul class="nav-links">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="schedule.html">スケジュール</a></li>
-        <li><a href="team.html">チーム紹介</a></li>
-        <li><a href="roster.html">ロースター</a></li>
-      </ul>
-    </nav>
+<body class="site-page highlights-page">
+  <div class="schedule-masthead">
+    <div class="masthead-overlay"></div>
+    <img class="masthead-logo" src="49ers.png" alt="49ersロゴ">
+  </div>
 
-    <header class="hero">
-      <div>
-        <h1>注目選手</h1>
-        <p class="tagline typewriter" data-typing-text="攻守のキープレーヤーをピックアップ">攻守のキープレーヤーをピックアップ</p>
-        <p class="intro">オフェンス・ディフェンスの軸となるプレーヤーを短く紹介します。</p>
-      </div>
-      <div class="hero-visual">
-        <img src="49ers.png" alt="49ers注目選手のイメージ">
-      </div>
-    </header>
+  <nav class="schedule-primary-nav">
+    <div class="nav-left">
+      <span class="nav-logo-text">49ers JP</span>
+      <a href="index.html">HOME</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="team.html">TEAM</a>
+      <a href="roster.html">ROSTER</a>
+      <a class="active" href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.ticketmaster.com" target="_blank" rel="noreferrer noopener">TICKETS</a>
+      <a href="https://www.49ers.com/" target="_blank" rel="noreferrer noopener">49ERS.COM</a>
+    </div>
+  </nav>
 
-    <section class="card">
-      <h2>ピックアップ</h2>
-      <div class="grid">
-        <div class="highlight-card">
-          <div class="badge">オフェンス</div>
-          <h3>クリスチャン・マカフリー</h3>
-          <p>ラン・パスキャッチ・パスプロの三拍子で攻撃の軸。エンドゾーン前でもフィールド中央でも頼れる存在。</p>
-        </div>
-        <div class="highlight-card">
-          <div class="badge">ディフェンス</div>
-          <h3>ニック・ボサ</h3>
-          <p>エッジからの圧力で相手のゲームプランを崩すキープレーヤー。ダブルチームを引きつけ他のラッシャーを生かす。</p>
-        </div>
-        <div class="highlight-card">
-          <div class="badge">フィールドジェネラル</div>
-          <h3>フレッド・ワーナー</h3>
-          <p>カバー範囲の広さと的確な判断でディフェンス全体をまとめるリーダー。パスカバーでもランサポートでも光る。</p>
-        </div>
-      </div>
+  <main class="site-main">
+    <section class="page-hero">
+      <p class="eyebrow">PLAYER SPOTLIGHTS</p>
+      <h1>注目選手</h1>
+      <p class="intro">オフェンス・ディフェンスの軸となるプレーヤーを短く紹介します。</p>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <p class="badge">OFFENSE</p>
+        <h3>クリスチャン・マカフリー</h3>
+        <p>ラン・パスキャッチ・パスプロの三拍子で攻撃の軸。エンドゾーン前でもフィールド中央でも頼れる存在。</p>
+      </article>
+      <article class="feature-card">
+        <p class="badge">DEFENSE</p>
+        <h3>ニック・ボサ</h3>
+        <p>エッジからの圧力で相手のゲームプランを崩すキープレーヤー。ダブルチームを引きつけ他のラッシャーを生かす。</p>
+      </article>
+      <article class="feature-card">
+        <p class="badge">FIELD GENERAL</p>
+        <h3>フレッド・ワーナー</h3>
+        <p>カバー範囲の広さと的確な判断でディフェンス全体をまとめるリーダー。パスカバーでもランサポートでも光る。</p>
+      </article>
     </section>
   </main>
 </body>

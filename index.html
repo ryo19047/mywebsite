@@ -11,58 +11,63 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
-  <main>
-    <nav class="top-nav">
-      <p class="logo-text">49ers JP</p>
-      <ul class="nav-links">
-        <li><a href="schedule.html">スケジュール</a></li>
-        <li><a href="team.html">チーム紹介</a></li>
-        <li><a href="roster.html">ロースター</a></li>
-        <li><a href="highlights.html">注目選手</a></li>
-      </ul>
-    </nav>
+<body class="site-page home-page">
+  <div class="schedule-masthead">
+    <div class="masthead-overlay"></div>
+    <img class="masthead-logo" src="49ers.png" alt="49ersロゴ">
+  </div>
 
-    <header class="hero">
-      <div>
-        <h1>サンフランシスコ・49ers</h1>
-        <p class="tagline typewriter" data-typing-text="日本語ファンサイト / 伝統と革新のレッド＆ゴールド">日本語ファンサイト / 伝統と革新のレッド＆ゴールド</p>
-        <p class="intro">カリフォルニア発の名門、サンフランシスコ・49ersを日本語で楽しむためのファンページです。チームの魅力や注目選手、試合をもっと面白く観るためのポイントをまとめています。</p>
-      </div>
-      <div class="hero-visual">
-        <img src="49ers.png" alt="サンフランシスコ・49ersをイメージした画像">
-      </div>
-    </header>
+  <nav class="schedule-primary-nav">
+    <div class="nav-left">
+      <span class="nav-logo-text">49ers JP</span>
+      <a class="active" href="index.html">HOME</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="team.html">TEAM</a>
+      <a href="roster.html">ROSTER</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.ticketmaster.com" target="_blank" rel="noreferrer noopener">TICKETS</a>
+      <a href="https://www.49ers.com/" target="_blank" rel="noreferrer noopener">49ERS.COM</a>
+    </div>
+  </nav>
 
-    <section class="card">
-      <h2>ページ案内</h2>
-      <p>各セクションは別ページで詳しく見られます。気になる項目をクリックしてください。</p>
-      <div class="grid">
-        <div class="highlight-card">
-          <div class="badge">最新</div>
-          <h3>スケジュール</h3>
-          <p>直近1ヶ月（2025-11-12〜2025-12-12）の3試合結果を掲載しています。</p>
-          <a class="pill" href="schedule.html">開く</a>
-        </div>
-        <div class="highlight-card">
-          <div class="badge">概要</div>
-          <h3>チーム紹介</h3>
-          <p>歴史やプレースタイル、ファン向け情報をまとめた紹介ページです。</p>
-          <a class="pill" href="team.html">開く</a>
-        </div>
-        <div class="highlight-card">
-          <div class="badge">メンバー</div>
-          <h3>ロースター</h3>
-          <p>主要メンバーの背番号・役割・特徴を一覧で確認できます。</p>
-          <a class="pill" href="roster.html">開く</a>
-        </div>
-        <div class="highlight-card">
-          <div class="badge">注目</div>
-          <h3>ピックアップ</h3>
-          <p>攻守のキープレーヤーをピックアップして短く紹介します。</p>
-          <a class="pill" href="highlights.html">開く</a>
-        </div>
+  <main class="site-main">
+    <section class="page-hero">
+      <p class="eyebrow">SAN FRANCISCO 49ERS / JAPAN FAN HUB</p>
+      <h1>RED & GOLD GATEWAY</h1>
+      <p class="intro">チーム紹介、スケジュール、ロースター、注目選手をシンプルにまとめた49ers日本語ハブ。気になる項目へすぐアクセスできます。</p>
+      <div class="hero-actions">
+        <a class="cta solid" href="schedule.html">直近スケジュール</a>
+        <a class="cta ghost" href="team.html">チームを知る</a>
       </div>
+    </section>
+
+    <section class="feature-grid">
+      <article class="feature-card">
+        <p class="badge">SCHEDULE</p>
+        <h3>直近1ヶ月の結果</h3>
+        <p>2025-11-12〜2025-12-12の3試合を掲載。スコアと勝敗をすぐ確認。</p>
+        <a class="link-arrow" href="schedule.html">見る</a>
+      </article>
+      <article class="feature-card">
+        <p class="badge">TEAM</p>
+        <h3>チームの背景</h3>
+        <p>歴史・スタイル・ファン向け情報をコンパクトにまとめた紹介ページ。</p>
+        <a class="link-arrow" href="team.html">見る</a>
+      </article>
+      <article class="feature-card">
+        <p class="badge">ROSTER</p>
+        <h3>主要メンバー</h3>
+        <p>背番号と役割、特徴を一覧化。キー選手を把握するのに便利。</p>
+        <a class="link-arrow" href="roster.html">見る</a>
+      </article>
+      <article class="feature-card">
+        <p class="badge">HIGHLIGHTS</p>
+        <h3>注目プレーヤー</h3>
+        <p>攻守のキープレーヤーをピックアップ。どこに注目すべきかがわかる。</p>
+        <a class="link-arrow" href="highlights.html">見る</a>
+      </article>
     </section>
   </main>
 </body>

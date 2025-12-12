@@ -259,7 +259,8 @@ tr:last-child td {
   .hero { padding: 26px; }
 }
 
-/* --- Schedule page --- */
+/* --- Site-wide shell (light / 49ers style) --- */
+body.site-page,
 body.schedule-page {
   margin: 0;
   padding: 0;
@@ -271,7 +272,8 @@ body.schedule-page {
   color: #3d261d;
   display: block;
 }
-.schedule-page main {
+body.schedule-page main,
+body.site-page main {
   width: 100%;
   display: block;
   padding: 0;
@@ -337,6 +339,182 @@ body.schedule-page {
 .schedule-primary-nav a.active {
   border-color: #ffe9c7;
 }
+.site-main {
+  width: min(1180px, 100%);
+  margin: 36px auto 80px;
+  padding: 0 18px;
+  display: grid;
+  gap: 26px;
+}
+.page-hero {
+  background: linear-gradient(135deg, #fdf8f1, #f1e4d5);
+  border: 2px solid #e2d4c2;
+  border-radius: 12px;
+  padding: 32px 28px 34px;
+  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
+  position: relative;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 20%, rgba(255,210,150,0.14), transparent 32%),
+    radial-gradient(circle at 78% 70%, rgba(180,0,15,0.08), transparent 38%);
+  pointer-events: none;
+}
+.eyebrow {
+  margin: 0 0 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #7c5538;
+  font-size: 0.95rem;
+}
+.page-hero h1 {
+  margin: 4px 0 10px;
+  font-size: clamp(2rem, 3.8vw, 2.8rem);
+  color: #a3000c;
+  letter-spacing: 0.02em;
+}
+.page-hero .intro {
+  margin: 0;
+  color: #4a3329;
+  line-height: 1.8;
+  max-width: 860px;
+}
+.hero-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cta {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.cta.solid {
+  background: #b4000f;
+  color: #fff;
+  border-color: #b4000f;
+}
+.cta.ghost {
+  background: transparent;
+  color: #b4000f;
+  border-color: #b4000f;
+}
+.feature-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.feature-card {
+  background: #fff;
+  border: 1px solid #e0d4c4;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+.site-page .badge {
+  display: inline-block;
+  background: rgba(180,0,15,0.12);
+  color: #a3000c;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+.feature-card h3 {
+  margin: 4px 0 8px;
+  font-size: 1.08rem;
+  color: #2f1b14;
+}
+.feature-card p {
+  margin: 0 0 10px;
+  color: #4a3329;
+  line-height: 1.7;
+}
+.link-arrow {
+  display: inline-block;
+  color: #b4000f;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.link-arrow:hover {
+  border-color: #b4000f;
+}
+.content-card {
+  background: #fff;
+  border: 1px solid #e0d4c4;
+  border-radius: 12px;
+  padding: 18px 18px 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+.section-title {
+  margin: 0 0 12px;
+  color: #a3000c;
+  letter-spacing: 0.03em;
+}
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.pill.light {
+  background: rgba(180,0,15,0.1);
+  color: #a3000c;
+  border: 1px solid #e2d4c2;
+}
+.bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+.bullet-list li {
+  background: #f7f1e8;
+  border: 1px solid #e2d4c2;
+  border-radius: 12px;
+  padding: 10px 12px;
+  color: #3a2b22;
+  line-height: 1.7;
+}
+.site-page .table-wrap {
+  overflow-x: auto;
+}
+.roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #2f1b14;
+  font-size: 0.96rem;
+  min-width: 480px;
+  background: #fff;
+}
+.roster-table th,
+.roster-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2d4c2;
+  text-align: left;
+}
+.roster-table th {
+  color: #7c5538;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+.roster-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Schedule page specifics --- */
 .schedule-sub-nav {
   display: flex;
   flex-wrap: wrap;

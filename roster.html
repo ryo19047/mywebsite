@@ -11,33 +11,38 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
-  <main>
-    <nav class="top-nav">
-      <p class="logo-text">49ers JP</p>
-      <ul class="nav-links">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="schedule.html">スケジュール</a></li>
-        <li><a href="team.html">チーム紹介</a></li>
-        <li><a href="highlights.html">注目選手</a></li>
-      </ul>
-    </nav>
+<body class="site-page roster-page">
+  <div class="schedule-masthead">
+    <div class="masthead-overlay"></div>
+    <img class="masthead-logo" src="49ers.png" alt="49ersロゴ">
+  </div>
 
-    <header class="hero">
-      <div>
-        <h1>主要ロースター</h1>
-        <p class="tagline typewriter" data-typing-text="背番号・ポジション・特徴を一覧でチェック">背番号・ポジション・特徴を一覧でチェック</p>
-        <p class="intro">攻守のコアとなる選手たちをピックアップ。背番号とポジション、特徴を短くまとめました。</p>
-      </div>
-      <div class="hero-visual">
-        <img src="49ers.png" alt="49ersロースターのイメージ">
-      </div>
-    </header>
+  <nav class="schedule-primary-nav">
+    <div class="nav-left">
+      <span class="nav-logo-text">49ers JP</span>
+      <a href="index.html">HOME</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a href="team.html">TEAM</a>
+      <a class="active" href="roster.html">ROSTER</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.ticketmaster.com" target="_blank" rel="noreferrer noopener">TICKETS</a>
+      <a href="https://www.49ers.com/" target="_blank" rel="noreferrer noopener">49ERS.COM</a>
+    </div>
+  </nav>
 
-    <section class="card">
-      <h2>ラインナップ</h2>
+  <main class="site-main">
+    <section class="page-hero">
+      <p class="eyebrow">ROSTER SNAPSHOT</p>
+      <h1>主要ロースター</h1>
+      <p class="intro">攻守のコアとなる選手たちをピックアップ。背番号とポジション、特徴を短くまとめました。</p>
+    </section>
+
+    <section class="content-card">
+      <h2 class="section-title">ラインナップ</h2>
       <div class="table-wrap">
-        <table>
+        <table class="roster-table">
           <thead>
             <tr>
               <th>背番号</th>
