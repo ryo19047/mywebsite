@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple風ストアページ（サンプル）</title>
+  <meta name="description" content="Appleのストアページ風にデザインしたサンプルページ。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1d1d1f;
+      --muted: #6e6e73;
+      --border: #e5e5e7;
+      --card: #f5f5f7;
+      --bg: #fbfbfd;
+      --accent-blue: #0077ed;
+      --accent-orange: #f55f17;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    header.topbar {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0 24px;
+      color: #3c3c3e;
+      font-size: 0.95rem;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .apple-dot {
+      width: 18px;
+      height: 18px;
+      background: #1d1d1f;
+      border-radius: 4px;
+      position: relative;
+    }
+    .apple-dot::after {
+      content: '';
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background: #1d1d1f;
+      border-radius: 50%;
+      top: -4px;
+      left: 10px;
+      transform: rotate(-20deg);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero {
+      text-align: center;
+      padding: 56px 24px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, rgba(20,136,255,0.24), rgba(245,121,40,0.24));
+      filter: blur(22px);
+      transform: translateY(-40%);
+      z-index: 0;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 0 0 10px;
+      letter-spacing: -0.01em;
+    }
+    .hero p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+    .product-row {
+      max-width: 1100px;
+      margin: 28px auto 36px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+      gap: 18px;
+      padding: 0 24px;
+    }
+    .product-icon {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .product-icon:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+    }
+    .circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(0,119,237,0.12), rgba(245,95,23,0.12));
+      border: 1px solid #f0f0f0;
+      display: grid;
+      place-items: center;
+      font-weight: 700;
+      color: #1d1d1f;
+    }
+    .product-label { font-size: 0.9rem; color: #3c3c3e; }
+    .headline {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 24px;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1d1d1f;
+    }
+    .cards {
+      max-width: 1100px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 20px 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+      display: grid;
+      gap: 10px;
+      min-height: 200px;
+    }
+    .card h3 { margin: 0; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .cta {
+      color: var(--accent-blue);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    footer {
+      border-top: 1px solid #f0f0f0;
+      padding: 22px 24px 32px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="apple-dot" aria-label="Apple風アイコン"></div>
+    <nav class="nav-links" aria-label="主要ナビゲーション">
+      <a href="#">ストア</a>
+      <a href="#">Mac</a>
+      <a href="#">iPad</a>
+      <a href="#">iPhone</a>
+      <a href="#">Watch</a>
+      <a href="#">AirPods</a>
+      <a href="#">アクセサリ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>クリスマスに、スペシャルなギフトを。</h1>
+    <p>大切な人へ、Apple製品の体験を贈ろう。</p>
+  </section>
+
+  <div class="product-row" aria-label="主要製品">
+    <div class="product-icon"><div class="circle">Mac</div><div class="product-label">Mac</div></div>
+    <div class="product-icon"><div class="circle">iP</div><div class="product-label">iPhone</div></div>
+    <div class="product-icon"><div class="circle">iPd</div><div class="product-label">iPad</div></div>
+    <div class="product-icon"><div class="circle">Wt</div><div class="product-label">Watch</div></div>
+    <div class="product-icon"><div class="circle">AP</div><div class="product-label">AirPods</div></div>
+    <div class="product-icon"><div class="circle">TV</div><div class="product-label">Apple TV</div></div>
+    <div class="product-icon"><div class="circle">HP</div><div class="product-label">HomePod</div></div>
+  </div>
+
+  <div class="headline">いま人気です。言葉にできない驚きを。</div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>iPhone 17 Pro</h3>
+      <p>A19 ProとProMotionで、写真もゲームもさらに美しく。</p>
+      <a class="cta" href="#">さらに詳しく</a>
+    </div>
+    <div class="card">
+      <h3>14インチ MacBook Pro</h3>
+      <p>M5 Proチップでクリエイティブも開発もスムーズに。</p>
+      <a class="cta" href="#">さらに詳しく</a>
+    </div>
+    <div class="card">
+      <h3>iPad Pro</h3>
+      <p>薄くて軽いボディに、Liquid Retinaディスプレイと強力なMシリーズを搭載。</p>
+      <a class="cta" href="#">さらに詳しく</a>
+    </div>
+  </div>
+
+  <footer>これはApple公式サイトを参考にしたデモページです。</footer>
+</body>
+</html>
