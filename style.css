@@ -1,11 +1,11 @@
 :root {
   --bg: #0b0d0f;
-  --card: #11131a;
+  --card: rgba(17, 19, 26, 0.78);
   --ink: #e5e7eb;
-  --muted: #9ca3af;
-  --accent: #f59e0b;
+  --muted: #cbd5e1;
+  --accent: #fbbf24;
   --accent-2: #38bdf8;
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
   --radius: 18px;
 }
 * { box-sizing: border-box; }
@@ -14,9 +14,15 @@ body {
   min-height: 100vh;
   font-family: 'Noto Sans JP', 'Space Grotesk', system-ui, -apple-system, sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.14), transparent 24%),
-              radial-gradient(circle at 80% 0%, rgba(245, 158, 11, 0.14), transparent 30%),
-              var(--bg);
+  background-image:
+    linear-gradient(135deg, rgba(0, 0, 0, 0.82), rgba(10, 12, 15, 0.9)),
+    linear-gradient(60deg, rgba(251, 191, 36, 0.16), rgba(56, 189, 248, 0.12)),
+    url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=2000&q=80');
+  background-blend-mode: normal, screen, normal;
+  background-size: cover, cover, cover;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center, center, center;
+  background-attachment: fixed, fixed, fixed;
   padding: 48px 22px 64px;
   display: flex;
   align-items: center;
@@ -31,8 +37,8 @@ main {
 }
 .hero {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(56,189,248,0.1));
-  border: 1px solid rgba(245,158,11,0.18);
+  background: linear-gradient(135deg, rgba(251,191,36,0.22), rgba(56,189,248,0.14));
+  border: 1px solid rgba(251,191,36,0.28);
   border-radius: calc(var(--radius) + 6px);
   padding: 32px;
   box-shadow: var(--shadow);
@@ -41,6 +47,7 @@ main {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  backdrop-filter: blur(3px);
 }
 .hero::after {
   content: '';
@@ -48,7 +55,7 @@ main {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  background: radial-gradient(circle, rgba(255,255,255,0.5), rgba(255,255,255,0));
   top: -60px;
   right: -40px;
   opacity: 0.7;
@@ -74,12 +81,13 @@ h1 {
 .hero-visual {
   justify-self: end;
   align-self: center;
-  width: min(320px, 100%);
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  width: min(340px, 100%);
+  background: rgba(10,10,12,0.55);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 14px;
   padding: 10px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(4px);
 }
 .hero-visual img {
   display: block;
@@ -89,10 +97,11 @@ h1 {
 }
 section.card {
   background: var(--card);
-  border: 1px solid rgba(148, 163, 184, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 22px;
   box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
 }
 h2 {
   margin: 0 0 0.9rem;
@@ -104,7 +113,7 @@ p { margin: 0 0 0.8rem; color: var(--muted); line-height: 1.8; }
   display: inline-block;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(245,158,11,0.14);
+  background: rgba(251,191,36,0.2);
   color: var(--ink);
   font-weight: 600;
   margin: 4px 6px 4px 0;
@@ -120,7 +129,7 @@ ul {
 li {
   padding: 10px 12px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
   color: var(--ink);
   line-height: 1.6;
 }
