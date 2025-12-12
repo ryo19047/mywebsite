@@ -536,19 +536,6 @@ body.site-page main {
   border-color: #b4000f;
   color: #b4000f;
 }
-.schedule-ad {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 28px;
-  background: linear-gradient(90deg, #2c195f 0%, #5d2f91 50%, #0b5dab 100%);
-  color: #f8f9ff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-}
-.ad-copy { display: grid; gap: 6px; }
-.ad-title { margin: 0; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.01em; }
-.ad-cta { margin: 0; opacity: 0.85; font-weight: 600; }
-.ad-brand { font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
 .schedule-main {
   width: min(1180px, 100%);
   margin: 36px auto 80px;
@@ -595,56 +582,80 @@ body.site-page main {
 .season-hero .presented span {
   color: #a3000c;
 }
-.games {
-  display: grid;
-  gap: 14px;
+.season-hero .season-note {
+  margin: 6px 0 0;
+  color: #5b3b2a;
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }
-.game-card {
+.schedule-list {
   display: grid;
-  grid-template-columns: 120px 1fr 140px;
+  gap: 12px;
+}
+.schedule-row {
+  display: grid;
+  grid-template-columns: 200px 1fr 160px;
+  gap: 12px;
   align-items: center;
   background: #fff;
   border: 1px solid #e0d4c4;
   border-radius: 12px;
-  padding: 16px 18px;
+  padding: 14px 16px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.06);
 }
-.game-card .week {
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #a3000c;
-}
-.game-card .label {
+.schedule-row .date-block .week {
   margin: 0 0 6px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #7c5538;
-  letter-spacing: 0.08em;
-}
-.game-card .teams {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   color: #2f1b14;
 }
-.game-card .score {
+.schedule-row .label {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+.schedule-row .label.home {
+  background: rgba(0,128,55,0.12);
+  color: #0f7b34;
+  border: 1px solid rgba(0,128,55,0.2);
+}
+.schedule-row .label.away {
+  background: rgba(180,0,15,0.12);
+  color: #a3000c;
+  border: 1px solid rgba(180,0,15,0.2);
+}
+.schedule-row .teams {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #2f1b14;
+}
+.schedule-row .location {
+  margin: 0;
+  color: #7c5538;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.schedule-row .score {
   text-align: right;
 }
-.game-card .result {
+.schedule-row .result {
   margin: 0;
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 800;
 }
-.game-card .result.win { color: #0f7b34; }
-.game-card .status {
+.schedule-row .result.win { color: #0f7b34; }
+.schedule-row .status {
   margin: 2px 0 0;
   color: #7c5538;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 @media (max-width: 900px) {
   .schedule-primary-nav { flex-direction: column; align-items: flex-start; }
-  .schedule-ad { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .game-card { grid-template-columns: 1fr; gap: 6px; text-align: left; }
-  .game-card .score { text-align: left; }
+  .schedule-row { grid-template-columns: 1fr; text-align: left; }
+  .schedule-row .score { text-align: left; }
 }
