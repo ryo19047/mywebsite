@@ -14,15 +14,17 @@ body {
   min-height: 100vh;
   font-family: 'Noto Sans JP', 'Space Grotesk', system-ui, -apple-system, sans-serif;
   color: var(--ink);
+  background-color: #0b0b10;
   background-image:
-    linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(12, 16, 22, 0.72)),
-    linear-gradient(60deg, rgba(252, 211, 77, 0.32), rgba(96, 165, 250, 0.16)),
-    url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=2000&q=80');
-  background-blend-mode: normal, screen, normal;
-  background-size: cover, cover, cover;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center, center, center;
-  background-attachment: fixed, fixed, fixed;
+    radial-gradient(1200px at 15% 20%, rgba(255, 215, 128, 0.18), transparent 55%),
+    radial-gradient(900px at 80% 0%, rgba(255, 196, 92, 0.2), transparent 52%),
+    linear-gradient(135deg, rgba(12, 14, 20, 0.78), rgba(18, 22, 30, 0.9)),
+    repeating-linear-gradient(45deg, rgba(255, 215, 128, 0.05) 0 2px, transparent 2px 14px);
+  background-blend-mode: screen, screen, normal, soft-light;
+  background-size: cover, cover, cover, 320px 320px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-position: center, center, center, center;
+  background-attachment: fixed, fixed, fixed, fixed;
   padding: 48px 22px 64px;
   display: flex;
   align-items: center;
@@ -35,20 +37,10 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: start;
 }
-.p5Canvas, canvas#bg-canvas {
-  position: fixed !important;
-  inset: 0;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: -1;
-  pointer-events: none;
-  mix-blend-mode: screen;
-  opacity: 0.9;
-}
 .hero {
   grid-column: 1 / -1;
-  background: linear-gradient(135deg, rgba(251,191,36,0.22), rgba(56,189,248,0.14));
-  border: 1px solid rgba(251,191,36,0.28);
+  background: linear-gradient(135deg, rgba(251,191,36,0.24), rgba(96,165,250,0.12));
+  border: 1px solid rgba(251,191,36,0.32);
   border-radius: calc(var(--radius) + 6px);
   padding: 32px;
   box-shadow: var(--shadow);
