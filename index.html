@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>若杉亮祐 | 自己紹介</title>
-  <meta name="description" content="若杉亮祐の自己紹介ページ。大学1年生で英語が好きです。">
+  <meta name="description" content="若杉亮祐の自己紹介ページ。大学1年生で英語が好きで、アメフト観戦とF1観戦が趣味です。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f9fb;
-      --card: #ffffff;
-      --ink: #0f172a;
-      --muted: #4b5563;
-      --accent: #2563eb;
-      --accent-2: #7c3aed;
-      --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+      --bg: #0b0d0f;
+      --card: #11131a;
+      --ink: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #f59e0b;
+      --accent-2: #38bdf8;
+      --shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
       --radius: 18px;
     }
     * { box-sizing: border-box; }
@@ -25,8 +25,8 @@
       min-height: 100vh;
       font-family: 'Noto Sans JP', 'Space Grotesk', system-ui, -apple-system, sans-serif;
       color: var(--ink);
-      background: radial-gradient(circle at 15% 20%, rgba(37, 99, 235, 0.08), transparent 25%),
-                  radial-gradient(circle at 85% 0%, rgba(124, 58, 237, 0.12), transparent 30%),
+      background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.14), transparent 24%),
+                  radial-gradient(circle at 80% 0%, rgba(245, 158, 11, 0.14), transparent 30%),
                   var(--bg);
       padding: 48px 22px 64px;
       display: flex;
@@ -42,13 +42,16 @@
     }
     .hero {
       grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(124,58,237,0.16));
-      border: 1px solid rgba(37,99,235,0.12);
+      background: linear-gradient(135deg, rgba(245,158,11,0.12), rgba(56,189,248,0.1));
+      border: 1px solid rgba(245,158,11,0.18);
       border-radius: calc(var(--radius) + 6px);
       padding: 32px;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
     .hero::after {
       content: '';
@@ -56,7 +59,7 @@
       width: 220px;
       height: 220px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0));
+      background: radial-gradient(circle, rgba(255,255,255,0.4), rgba(255,255,255,0));
       top: -60px;
       right: -40px;
       opacity: 0.7;
@@ -79,9 +82,25 @@
       margin: 0;
       font-size: 1.05rem;
     }
+    .hero-visual {
+      justify-self: end;
+      align-self: center;
+      width: min(320px, 100%);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: var(--shadow);
+    }
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
     section.card {
       background: var(--card);
-      border: 1px solid #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.16);
       border-radius: var(--radius);
       padding: 22px;
       box-shadow: var(--shadow);
@@ -96,7 +115,7 @@
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(37,99,235,0.08);
+      background: rgba(245,158,11,0.14);
       color: var(--ink);
       font-weight: 600;
       margin: 4px 6px 4px 0;
@@ -112,7 +131,7 @@
     li {
       padding: 10px 12px;
       border-radius: 12px;
-      background: #f3f4f6;
+      background: rgba(255,255,255,0.03);
       color: var(--ink);
       line-height: 1.6;
     }
@@ -125,16 +144,22 @@
 <body>
   <main>
     <header class="hero">
-      <h1>若杉亮祐</h1>
-      <p class="tagline">大学1年生 / 英語が好き</p>
-      <p class="intro">言葉を通して新しい世界に触れるのが好きです。大学生活で英語を軸に、学びや体験を重ねながら、自分の興味をじっくり育てています。</p>
+      <div>
+        <h1>若杉亮祐</h1>
+        <p class="tagline">大学1年生 / 英語好き / アメフト＆F1観戦</p>
+        <p class="intro">言葉を通して新しい世界に触れるのが好きです。英語を軸に、学びや体験を重ねながら、ゲームの展開やレースの駆け引きも味わっています。</p>
+      </div>
+      <div class="hero-visual">
+        <img src="49ers.png" alt="サンフランシスコ・49ersをイメージした画像">
+      </div>
     </header>
 
     <section class="card">
       <h2>いまのわたし</h2>
-      <p>大学1年生として基礎を固めつつ、英語でのインプット・アウトプットを増やしています。授業や日常の中で気づいたことをメモし、表現の幅を広げるのが日課です。</p>
+      <p>大学1年生として基礎を固めつつ、英語でのインプット・アウトプットを増やしています。授業や日常で拾った表現をメモし、ゲーム解説やレース記事でも活かすのが日課です。</p>
       <div class="pill">英語学習</div>
-      <div class="pill">大学生活</div>
+      <div class="pill">アメフト観戦</div>
+      <div class="pill">F1観戦</div>
       <div class="pill">ことばへの探究心</div>
     </section>
 
@@ -142,14 +167,14 @@
       <h2>興味・好きなこと</h2>
       <ul>
         <li>英語で映画や記事を読み、気に入った表現を集めること</li>
-        <li>キャンパスで出会う人との会話から視野を広げること</li>
-        <li>学んだフレーズを自分の言葉に落とし込んで伝える練習</li>
+        <li>アメフトの戦術やチームの流れを追いながら観戦すること</li>
+        <li>F1のレース展開やドライバーの戦略をチェックすること</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>これから</h2>
-      <p>英語で学べる分野を広く試しながら、自分の関心を深めていきたいです。交流の機会があればぜひ声をかけてください。</p>
+      <p>英語で学べる分野を広く試しながら、自分の関心を深めていきたいです。スポーツ観戦好きの方とも語り合えると嬉しいです。</p>
     </section>
   </main>
 </body>
