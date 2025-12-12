@@ -10,52 +10,79 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main>
-    <header class="hero">
-      <div>
-        <h1>サンフランシスコ・49ers</h1>
-        <p class="tagline">直近1ヶ月の戦績（2025-11-12 〜 2025-12-12）</p>
-        <p class="intro">ファン向けに直近の3試合を一覧にしました。スコアと結果をまとめてチェックできます。</p>
-      </div>
-      <div class="hero-visual">
-        <img src="49ers.png" alt="サンフランシスコ・49ersのロゴイメージ">
-      </div>
-    </header>
+<body class="site-page results-page">
+  <div class="schedule-masthead">
+    <div class="masthead-overlay"></div>
+    <img class="masthead-logo" src="49ers.png" alt="49ersロゴ">
+  </div>
 
-    <section class="card">
-      <h2>試合一覧（日本時間）</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>日付</th>
-              <th>対戦</th>
-              <th>スコア</th>
-              <th>結果</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2025-11-17</td>
-              <td>49ers @ カーディナルス</td>
-              <td>41 – 22</td>
-              <td>49ers勝利</td>
-            </tr>
-            <tr>
-              <td>2025-11-25</td>
-              <td>パンサーズ @ 49ers</td>
-              <td>20 – 9</td>
-              <td>49ers勝利</td>
-            </tr>
-            <tr>
-              <td>2025-12-01</td>
-              <td>49ers @ ブラウンズ</td>
-              <td>26 – 8</td>
-              <td>49ers勝利</td>
-            </tr>
-          </tbody>
-        </table>
+  <nav class="schedule-primary-nav">
+    <div class="nav-left">
+      <span class="nav-logo-text">49ers JP</span>
+      <a href="index.html">HOME</a>
+      <a href="schedule.html">SCHEDULE</a>
+      <a class="active" href="results.html">RESULTS</a>
+      <a href="team.html">TEAM</a>
+      <a href="roster.html">ROSTER</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.ticketmaster.com" target="_blank" rel="noreferrer noopener">TICKETS</a>
+      <a href="https://www.49ers.com/" target="_blank" rel="noreferrer noopener">49ERS.COM</a>
+    </div>
+  </nav>
+
+  <main class="schedule-main">
+    <section class="season-hero">
+      <p class="season-sub">2025 シーズン</p>
+      <h1>GAME RESULTS</h1>
+      <p class="season-note">直近1ヶ月（2025-11-12〜2025-12-12）の戦績一覧</p>
+    </section>
+
+    <section class="schedule-list">
+      <div class="schedule-row">
+        <div class="date-block">
+          <p class="week">11月17日（日本時間）</p>
+          <p class="label away">AWAY</p>
+        </div>
+        <div class="matchup">
+          <p class="teams">49ers @ カーディナルス</p>
+          <p class="location">ステートファーム・スタジアム</p>
+        </div>
+        <div class="score">
+          <p class="result win">41–22</p>
+          <p class="status">FINAL（49ers勝利）</p>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="date-block">
+          <p class="week">11月25日（日本時間）</p>
+          <p class="label home">HOME</p>
+        </div>
+        <div class="matchup">
+          <p class="teams">パンサーズ @ 49ers</p>
+          <p class="location">リーバイス・スタジアム</p>
+        </div>
+        <div class="score">
+          <p class="result win">20–9</p>
+          <p class="status">FINAL（49ers勝利）</p>
+        </div>
+      </div>
+
+      <div class="schedule-row">
+        <div class="date-block">
+          <p class="week">12月1日（日本時間）</p>
+          <p class="label away">AWAY</p>
+        </div>
+        <div class="matchup">
+          <p class="teams">49ers @ ブラウンズ</p>
+          <p class="location">クリーブランド・ブラウンズ・スタジアム</p>
+        </div>
+        <div class="score">
+          <p class="result win">26–8</p>
+          <p class="status">FINAL（49ers勝利）</p>
+        </div>
       </div>
     </section>
   </main>
