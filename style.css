@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
 :root {
   --bg: #0c1016;
   --card: rgba(20, 24, 32, 0.8);
@@ -12,7 +14,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Noto Sans JP', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  font-family: 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
   color: var(--ink);
   background-color: #0b0b10;
   background-image:
@@ -265,7 +267,7 @@ body.schedule-page {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font-family: 'Noto Sans JP', 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  font-family: 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
   background: radial-gradient(circle at 20% 20%, rgba(255, 220, 180, 0.2), transparent 32%),
     radial-gradient(circle at 80% 10%, rgba(255, 210, 150, 0.18), transparent 30%),
     #f7f1e4;
@@ -588,6 +590,32 @@ body.site-page main {
   font-weight: 700;
   letter-spacing: 0.06em;
 }
+.record-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  padding: 18px 18px 0 18px;
+}
+.record-pill {
+  background: #fff1de;
+  border: 1px solid #e6c498;
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 12px 18px rgba(0,0,0,0.08);
+}
+.record-pill.light { background: #fff7ec; }
+.record-pill .record-title {
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #8f000c;
+}
+.record-pill .record-value {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #3d261d;
+  font-weight: 800;
+}
 .schedule-list {
   display: grid;
   gap: 12px;
@@ -647,6 +675,11 @@ body.site-page main {
   font-size: 1.2rem;
   font-weight: 800;
 }
+.schedule-row.upcoming {
+  opacity: 0.92;
+  background: linear-gradient(90deg, rgba(255, 224, 190, 0.45), rgba(255,255,255,0.92));
+}
+.schedule-row .result.pending { color: #8f000c; }
 .schedule-row .result.win { color: #0f7b34; }
 .schedule-row .status {
   margin: 2px 0 0;
