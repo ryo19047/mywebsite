@@ -35,6 +35,16 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: start;
 }
+.p5Canvas, canvas#bg-canvas {
+  position: fixed !important;
+  inset: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
 .hero {
   grid-column: 1 / -1;
   background: linear-gradient(135deg, rgba(251,191,36,0.22), rgba(56,189,248,0.14));
