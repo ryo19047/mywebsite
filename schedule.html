@@ -11,36 +11,86 @@
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
 </head>
-<body>
-  <main>
-    <nav class="top-nav">
-      <p class="logo-text">49ers JP</p>
-      <ul class="nav-links">
-        <li><a href="index.html">ホーム</a></li>
-        <li><a href="team.html">チーム紹介</a></li>
-        <li><a href="roster.html">ロースター</a></li>
-        <li><a href="highlights.html">注目選手</a></li>
-      </ul>
-    </nav>
+<body class="schedule-page">
+  <div class="schedule-masthead">
+    <div class="masthead-overlay"></div>
+    <img class="masthead-logo" src="49ers.png" alt="49ersロゴ">
+  </div>
 
-    <header class="hero">
-      <div>
-        <h1>直近スケジュール</h1>
-        <p class="tagline typewriter" data-typing-text="2025-11-12〜2025-12-12の試合結果を掲載">2025-11-12〜2025-12-12の試合結果を掲載</p>
-        <p class="intro">直近1ヶ月に行われた49ersの3試合結果です。スコアと対戦相手をまとめています。</p>
-      </div>
-      <div class="hero-visual">
-        <img src="49ers.png" alt="49ersロゴとフィールドのイメージ">
-      </div>
-    </header>
+  <nav class="schedule-primary-nav">
+    <div class="nav-left">
+      <span class="nav-logo-text">49ers JP</span>
+      <a href="index.html">HOME</a>
+      <a class="active" href="schedule.html">SCHEDULE</a>
+      <a href="team.html">TEAM</a>
+      <a href="roster.html">ROSTER</a>
+      <a href="highlights.html">HIGHLIGHTS</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://www.ticketmaster.com" target="_blank" rel="noreferrer noopener">TICKETS</a>
+      <a href="https://www.49ers.com/" target="_blank" rel="noreferrer noopener">49ERS.COM</a>
+    </div>
+  </nav>
 
-    <section class="card">
-      <h2>2025-11-12〜2025-12-12</h2>
-      <ul>
-        <li>2025-11-17（日本時間）：@ カーディナルス 41–22（49ers勝利）</li>
-        <li>2025-11-25（日本時間）：vs パンサーズ 20–9（49ers勝利）</li>
-        <li>2025-12-01（日本時間）：@ ブラウンズ 26–8（49ers勝利）</li>
-      </ul>
+  <nav class="schedule-sub-nav">
+    <a class="active" href="#">Schedule</a>
+    <a href="#">Sync Schedule to Calendar</a>
+    <a href="#">Printable Schedule</a>
+    <a href="#">League Schedule</a>
+    <a href="#">Gameday Magazines</a>
+  </nav>
+
+  <div class="schedule-ad">
+    <div class="ad-copy">
+      <p class="ad-title">WiFi so smooth, it's a highlight reel.</p>
+      <p class="ad-cta">チェックする</p>
+    </div>
+    <div class="ad-brand">xfinity</div>
+  </div>
+
+  <main class="schedule-main">
+    <section class="season-hero">
+      <p class="season-sub">2025 SEASON</p>
+      <h1>SEASON SCHEDULE</h1>
+      <p class="presented">PRESENTED BY <span>UNITED AIRLINES</span></p>
+    </section>
+
+    <section class="games">
+      <div class="game-card">
+        <div class="week">NOV 17</div>
+        <div class="matchup">
+          <p class="label">AWAY</p>
+          <p class="teams">49ers @ カーディナルス</p>
+        </div>
+        <div class="score">
+          <p class="result win">41–22</p>
+          <p class="status">W - FINAL</p>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="week">NOV 25</div>
+        <div class="matchup">
+          <p class="label">HOME</p>
+          <p class="teams">パンサーズ @ 49ers</p>
+        </div>
+        <div class="score">
+          <p class="result win">20–9</p>
+          <p class="status">W - FINAL</p>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="week">DEC 01</div>
+        <div class="matchup">
+          <p class="label">AWAY</p>
+          <p class="teams">49ers @ ブラウンズ</p>
+        </div>
+        <div class="score">
+          <p class="result win">26–8</p>
+          <p class="status">W - FINAL</p>
+        </div>
+      </div>
     </section>
   </main>
 </body>
